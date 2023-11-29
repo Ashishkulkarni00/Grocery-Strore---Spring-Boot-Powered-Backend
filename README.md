@@ -84,7 +84,7 @@ This repository contains the codebase for a Grocery Management System API. It al
 **Request Body Example:**
 ```json
 {
-    "username" : "saurabh",
+    "username" : "saurabhAkolkar",
     "email" : "ashish@kulkarni",
     "password" : "saurabh",
     "roles" : "ROLE_USER"
