@@ -170,3 +170,47 @@ Request Body Example:
     "price" : 120.00
 }
 ```
+## Grocery Management System Dockerfile
+- This Dockerfile sets up an environment to run the Grocery Management System application.
+
+### Usage
+- Building the Docker Image
+- Ensure you have Docker installed. Run the following command in the directory containing the Dockerfile and the Grocery App JAR file:
+
+- **bash**
+```
+docker build -t grocery-app .
+```
+
+### Running the Docker Container
+- After successfully building the Docker image, run the container using the following command:
+
+- **bash**
+```
+docker run -p 8080:8080 grocery-app
+```
+- This will start the Grocery Management System application within a Docker container, exposing it on port 8080 of your localhost.
+
+### Dockerfile Details
+#### Dockerfile
+
+# Use an official openjdk runtime as a parent image
+- FROM openjdk:latest
+
+# Set the working directory to /app
+- WORKDIR /app
+
+# ADD Jar file of Grocery App to the working directory
+- ADD target/*.jar GROCERY_APP.jar
+
+# Expose port 8080 for the container
+- EXPOSE 8080
+
+# Start the app
+- **ENTRYPOINT ["java","-jar","/GROCERY_APP.jar"]**
+- **FROM openjdk:latest**: Uses the latest official OpenJDK runtime as the base image.
+- **WORKDIR /app**: Sets the working directory inside the container to /app.
+- **ADD target/*.jar GROCERY_APP.jar**: Adds the JAR file of the Grocery App to the working directory.
+- **EXPOSE 8080**: Exposes port 8080 within the container.
+- **ENTRYPOINT** ["java","-jar","/GROCERY_APP.jar"]: Specifies the command to start the application when the container starts.
+- Ensure that the Grocery App JAR file is placed in the target/ directory relative to the Dockerfile for the ADD command to work properly.
