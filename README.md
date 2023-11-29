@@ -194,19 +194,19 @@ docker run -p 8080:8080 grocery-app
 ### Dockerfile Details
 #### Dockerfile
 
-# Use an official openjdk runtime as a parent image
+### Use an official openjdk runtime as a parent image
 - FROM openjdk:latest
 
-# Set the working directory to /app
+### Set the working directory to /app
 - WORKDIR /app
 
-# ADD Jar file of Grocery App to the working directory
+### ADD Jar file of Grocery App to the working directory
 - ADD target/*.jar GROCERY_APP.jar
 
-# Expose port 8080 for the container
+### Expose port 8080 for the container
 - EXPOSE 8080
 
-# Start the app
+## Start the app
 - **ENTRYPOINT ["java","-jar","/GROCERY_APP.jar"]**
 - **FROM openjdk:latest**: Uses the latest official OpenJDK runtime as the base image.
 - **WORKDIR /app**: Sets the working directory inside the container to /app.
