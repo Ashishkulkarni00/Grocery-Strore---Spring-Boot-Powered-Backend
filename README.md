@@ -66,17 +66,17 @@ This repository contains the codebase for a Grocery Management System API. It al
 - No Authentication Required
 - Retrieves a list of all users.
 
-  ### Get User By Username
--**GET** /api/v1/users/{username}
+### Get User By Username
+- **GET** /api/v1/users/{username}
 - No Authentication Required
 - Retrieves user details by username.
   
-  ### Delete User By Username
+### Delete User By Username
 - **DELETE** /api/v1/users/{username}
 - No Authentication Required
 - Deletes a user by username.
   
-  ### Update User By Username
+### Update User By Username
 - **PUT** /api/v1/users/{username}
 - No Authentication Required
 - Updates user details by username.
@@ -156,7 +156,6 @@ Request Body Example:
   ]
 }
 ```
-
 ## Inventory Management
 
 ### Update Inventory
